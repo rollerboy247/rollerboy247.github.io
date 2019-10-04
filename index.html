@@ -28,24 +28,178 @@
 
     <!-- CSS !Keep this at the end of head element -->
     <link rel="stylesheet" href="/css/base.css" >
-	
-	<script>
-		$(function(){
-			$("#navigation").load("navbar.html");
-		});
-	</script>
-	<script>
-		$(function(){
-			$("#botFooter").load("footer.html");
-		});
-	</script>
 
   </head>
 
 	<body class="bg-light">
 <!---------- Navigation Bar ---------->
-		<div id="navigation"></div>
+		<!--<div id="navigation"></div>
 <!---------- Navigation Bar ---------->
+
+<nav class="navbar navbar-default" style="border: 0px;">
+	<div class="container-fluid" style="display: inline;">
+		<div class="navbar-header">
+		  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>
+	<span class="icon-bar"></span>                        
+		  </button>
+		  <a class="navbar-brand text-primary" href="index.html">Detours</a>
+		</div>
+		<div class="collapse navbar-collapse" id="myNavbar">
+		  <ul class="nav navbar-nav">
+			  <li><a href="#">Home</a></li>
+			  <li class="dropdown">
+				<a class="dropdown-toggle" href="#" style="color: #007bff;">Destinations</a>
+	  <ul class="dropdown-menu">
+		<li><a href="#">North America</a></li>
+		<li><a href="#">South America</a></li>
+		<li><a href="#">Europe</a></li>
+		<li><a href="#">Asia</a></li>
+	  </ul>
+	</li>
+			  <li class="dropdown">
+				<a class="dropdown-toggle" href="#" style="color: #007bff;">Agents</a>
+	  <ul class="dropdown-menu">
+		<li><a href="#">Agent 1</a></li>
+		<li><a href="#">Agent 2</a></li>
+		<li><a href="#">Agent 3</a></li>
+		<li><a href="#">Agent 4</a></li>
+	  </ul>
+			  </li>
+	<li><a href="#">Help</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+	<li class="nav-li"><a href="" class="btn" data-toggle="modal" data-target="#modalRegisterForm"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	<li class="nav-li"><a href="" class="btn" data-toggle="modal" data-target="#modalLoginForm"><span class="glyphicon glyphicon-log-in"></span> Log in</a>
+	</li>
+
+	<!--Modal: Login-->
+	<div class="modal fade" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog cascading-modal" role="document">
+	  <!--Content-->
+	  <div class="modal-content">
+		  <!--Modal cascading tabs-->
+		  <div class="modal-c-tabs">
+			
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+			  <li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#panel7" role="tab"><i class="glyphicon glyphicon-log-in mr-1"></i>
+				  Login</a>
+			  </li>
+			</ul>
+	
+			<!-- Tab panels -->
+			<div class="tab-content">
+			  <!--Panel 7-->
+			  <div class="tab-pane fade in show active" id="panel7" role="tabpanel">
+	
+				<!--Body-->
+				<div class="modal-body mb-1">
+				  <div class="md-form form-sm mb-5">
+					<i class="fas fa-envelope prefix"></i>
+					<input type="email" id="modalLRInput10" class="form-control form-control-sm validate">
+					<label data-error="wrong" data-success="right" for="modalLRInput10">Your email</label>
+				  </div>
+	
+				  <div class="md-form form-sm mb-4">
+					<i class="fas fa-lock prefix"></i>
+					<input type="password" id="modalLRInput11" class="form-control form-control-sm validate">
+					<label data-error="wrong" data-success="right" for="modalLRInput11">Your password</label>
+				  </div>
+				  <div class="text-center mt-2">
+					<button class="btn btn-info bg-primary">Log in <i class="fas fa-sign-in ml-1"></i></button>
+				  </div>
+				</div>
+				<!--Footer-->
+				<div class="modal-footer">
+				  <div class="options text-center text-md-right mt-1">
+					<p>Not a member? <a href="#" class="text-primary">Sign Up</a></p>
+					<p>Forgot <a href="#" class="text-primary">Password?</a></p>
+				  </div>
+				  <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal">Close</button>
+				</div>
+	
+			  </div>
+			  <!--/.Panel 7-->
+			  
+			</div>
+		  </div>
+		</div>
+		<!--/.Content-->
+	  </div>
+	</div>
+	<!--Modal: Login / Register Form-->
+	
+	<!--Modal: Register Form-->
+	<div class="modal fade" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	  <div class="modal-dialog cascading-modal" role="document">
+	  <!--Content-->
+	  <div class="modal-content">
+		  <!--Modal cascading tabs-->
+		  <div class="modal-c-tabs">
+			
+			<!-- Nav tabs -->
+			<ul class="nav nav-tabs md-tabs tabs-2 light-blue darken-3" role="tablist">
+			  <li class="nav-item">
+				<a class="nav-link active" data-toggle="tab" href="#panel8" role="tab"><i class="fas fa-user-plus mr-1"></i>
+				  Register</a>
+			  </li>
+			</ul>
+	
+			<!-- Tab panels -->
+			<div class="tab-content">
+			  <!--Panel 8-->
+			  <div class="tab-pane fade in show active" id="panel8" role="tabpanel">
+	
+				<!--Body-->
+				<div class="modal-body">
+				  <div class="md-form form-sm mb-5">
+					<i class="fas fa-envelope prefix"></i>
+					<input type="email" id="modalLRInput12" class="form-control form-control-sm validate">
+					<label data-error="wrong" data-success="right" for="modalLRInput12">Your email</label>
+				  </div>
+	
+				  <div class="md-form form-sm mb-5">
+					<i class="fas fa-lock prefix"></i>
+					<input type="password" id="modalLRInput13" class="form-control form-control-sm validate">
+					<label data-error="wrong" data-success="right" for="modalLRInput13">Your password</label>
+				  </div>
+	
+				  <div class="md-form form-sm mb-4">
+					<i class="fas fa-lock prefix"></i>
+					<input type="password" id="modalLRInput14" class="form-control form-control-sm validate">
+					<label data-error="wrong" data-success="right" for="modalLRInput14">Repeat password</label>
+				  </div>
+	
+				  <div class="text-center form-sm mt-2">
+					<button class="btn btn-info bg-primary">Sign up <i class="fas fa-sign-in ml-1"></i></button>
+				  </div>
+	
+				</div>
+				<!--Footer-->
+				<div class="modal-footer">
+				  <div class="options text-right">
+					<p class="pt-1">Already have an account? <a href="#" class="text-primary">Log In</a></p>
+				  </div>
+				  <button type="button" class="btn btn-outline-info ml-auto" data-dismiss="modal">Close</button>
+				</div>
+			  </div>
+			  <!--/.Panel 8-->
+			  
+			</div>
+		  </div>
+		</div>
+		<!--/.Content-->
+	  </div>
+	</div>
+	<!--Modal: Login / Register Form-->
+
+  </ul>
+		</div>
+	</div>
+</nav>
 
 		<div style="margin-top: 100px;"></div>
 		
@@ -268,8 +422,55 @@ Nulla occaecat commodo occaecat proident amet veniam do do exercitation elit. Ir
     </section>
 
     <!-- Footer -->
-	<div id="botFooter"></div>
+	<!--<div id="botFooter"></div>
     <!-- Footer -->
+	
+	<footer class="footer bg-light">
+  <div class="container">
+	<div class="row">
+	  <div class="col-lg-6 h-100 text-center text-lg-left my-auto">
+		<ul class="list-inline mb-2">
+		  <li class="list-inline-item">
+			<a href="about.html">About</a>
+		  </li>
+		  <li class="list-inline-item">&sdot;</li>
+		  <li class="list-inline-item">
+			<a href="contact.html">Contact</a>
+		  </li>
+		  <li class="list-inline-item">&sdot;</li>
+		  <li class="list-inline-item">
+			<a href="terms.html">Terms of Use</a>
+		  </li>
+		  <li class="list-inline-item">&sdot;</li>
+		  <li class="list-inline-item">
+			<a href="privacy.html">Privacy Policy</a>
+		  </li>
+		</ul>
+		<p class="text-muted small mb-4 mb-lg-0">Copyright &copy; 2019 Detours, Inc. All Rights Reserved.</p>
+	  </div>
+
+	  <div class="col-lg-6 h-100 text-center text-lg-right my-auto">
+		<ul class="list-inline mb-0">
+		  <li class="list-inline-item mr-3">
+			<a target="_blank" href="https://www.facebook.com">
+			  <i class="fab fa-facebook fa-2x fa-fw"></i>
+			</a>
+		  </li>
+		  <li class="list-inline-item mr-3">
+			<a target="_blank" href="https://www.linkedin.com">
+			  <i class="fab fa-linkedin fa-2x fa-fw"></i>
+			</a>
+		  </li>
+		  <li class="list-inline-item">
+			<a target="_blank" href="https://github.com">
+			  <i class="fab fa-github fa-2x fa-fw"></i>
+			</a>
+		  </li>
+		</ul>
+	  </div>
+	</div>
+  </div>
+</footer>
 	
     <!-- Bootstrap core JavaScript -->
     <script src="/vendor/jquery/jquery.min.js"></script>
